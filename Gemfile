@@ -14,7 +14,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'rspec-rails','3.2.3' 
+  gem 'rspec-rails','3.2.3'
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
 end
 
 
