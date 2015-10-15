@@ -13,11 +13,17 @@ feature "Creating Articles" do
     fill_in "Body", with: option[:body]
     click_button "Create Article"
   end
+
+  before do
+    @marlon = User.create!(email: "marlon@exemple.com", password: "password")
+    login_as(@marlon)
+  end
   
   scenario "A user a new article" do
     create_article
     expect(page).to have_content("Article has been created")
     expect(page.current_path).to eq(articles_path)
+    expect(page).to have_content("Created by: #{@marlon.email}")
   end
 
   scenario "A user fails to create a new article" do

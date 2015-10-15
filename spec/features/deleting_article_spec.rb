@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 feature "Deleting an Article" do
+  
   before do
-    @article = Article.create(title: "First Article", body: "Body of first article")
+    marlon = User.create(email: "marlon@exemple.com", password: "password")
+    login_as(marlon)
+    @article = Article.create(title: "First Article", body: "body of first article", user: marlon)
   end
 
   scenario "A user deletes an article" do

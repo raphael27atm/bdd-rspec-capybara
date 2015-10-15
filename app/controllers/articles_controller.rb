@@ -53,13 +53,14 @@ class ArticlesController < ApplicationController
   end
     
   def article_build
-    Article.new(article_params)
+    current_user.articles.build(article_params)
   end
 
   def article_params
     params.require(:article).permit(
       :title,
-      :body
+      :body,
+      :user_id
     )
   end
 end
