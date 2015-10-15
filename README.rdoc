@@ -2,6 +2,7 @@
 
 {<img src="https://codeclimate.com/github/raphael27atm/bdd-rspec-capybara/badges/gpa.svg" />}[https://codeclimate.com/github/raphael27atm/bdd-rspec-capybara]
 {<img src="https://codeclimate.com/github/raphael27atm/bdd-rspec-capybara/badges/coverage.svg" />}[https://codeclimate.com/github/raphael27atm/bdd-rspec-capybara/coverage]
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
