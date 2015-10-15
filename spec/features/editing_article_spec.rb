@@ -19,7 +19,9 @@ feature "Editing an article" do
     expect(current_path).to eq(article_path(@article))
   end
 
-  scenario "A user fails to update an article" do 
+  scenario "A user fails to update an article" do
+    visit "/"
+
     click_link @article.title
     click_link "Edit Article"
 
